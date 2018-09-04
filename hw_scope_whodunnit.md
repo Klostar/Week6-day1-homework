@@ -30,6 +30,8 @@ console.log(verdict);
 <!--
 chloe - will declare that miss scarlet is the murderer -->
 
+<!-- class notes - refering to scenario object.  -->
+
 
 #### Episode 2
 
@@ -51,6 +53,7 @@ console.log(verdict);
 
 <!-- chloe - wont work as trying to assign a new murderer.  will error. -->
 
+
 #### Episode 3
 
 ```js
@@ -70,11 +73,13 @@ const secondVerdict = `The murderer is ${murderer}.`;
 console.log('Second Verdict: ', secondVerdict);
 
 // chloe -second verdict will be professor plum as its outside the funct
+
 ```
 
 <!-- chloe - let will allow you to reassign who the murderer is so will change from
         Professor plum to mrs Peacock -->
-
+<!-- class notes let new variable being declared. variable is blockscoped  two seperate variable with the same named
+-->
 
 #### Episode 4
 
@@ -97,7 +102,7 @@ console.log(`Suspect three is ${suspectThree}.`);
 // chloe - will show suspect 3 as mrs peacock as it is outside the fuction and not
 // let you further edit any suspects as it is then changed to a const & cannot edit.
 
-
+// class notes - looks locally first inside the scope then it would find the one above if it couldn't find anything.
 ```
 
 #### Episode 5
@@ -156,7 +161,10 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
+
+
 //found this hard to follow
+
 
 ```
 
@@ -170,20 +178,20 @@ let murderer = 'Professor Plum';
 const changeMurderer = function() {
   murderer = 'Mr. Green';
 
-  //murderer is now mrs green
+  //murderer is now mr green
 
   const plotTwist = function() {
     let murderer = 'Colonel Mustard';
 
-//murderer is now Mustard as assigning to different object.
+//murderer is now Mustard as assigning to different object. new local variable is created.
 
     const unexpectedOutcome = function() {
       murderer = 'Miss Scarlet';
     }
 
-
+// changes the new local variable.
     unexpectedOutcome();
-    //murderer is now mrs scarlet and cannot be changed
+    //murderer is now mrs scarlet and cannot be changed - not called yet as its inside the block.
   }
 
   plotTwist();
@@ -200,8 +208,8 @@ changeMurderer();
 const verdict = declareMurderer();
 console.log(verdict);
 
-//changemurderer is now called so the function will return the murderer is mrs green.
-// as her function is named 'change murderer'
+//changemurderer is now called so the function will return the murderer is mr green.
+// as the function is named 'change murderer'
 ```
 
 #### Episode 8
@@ -252,6 +260,8 @@ console.log(verdict);
 
 // will show weapon as a candle stick
 
+//
+
 ```
 
 #### Episode 9
@@ -276,6 +286,7 @@ const declareMurderer = function() {
 const verdict = declareMurderer();
 console.log(verdict);
 //will decalre murderer professor plum
+// class notes - as its the global scope variable. let is block scoped
 
 
 ### Extensions
